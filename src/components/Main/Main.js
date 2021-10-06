@@ -1,8 +1,9 @@
 import React from 'react';
 import {nanoid} from "nanoid";
-import {CuretSVG, PlusSVG} from "../../asstets/RactangulareSVG";
+import {CuretSVG, EllipseSVG, PlusSVG} from "../../asstets/RactangulareSVG";
 import Accordion from "../Accordion/Accordion";
 import s from "./Main.module.css"
+import AccordionItem from "../AccordionItem/AccordionItem";
 
 
 const GraphsID_1 = nanoid()
@@ -19,47 +20,47 @@ const AllGraphsRows = {
     [GraphsID_1]: [{
         id: nanoid(),
         title: '79.0,43.104',
-        image: 'img'
+        image: <EllipseSVG/>
     },
         {
             id: nanoid(),
             title: '4.0,5',
-            image: 'img'
+            image: <EllipseSVG/>
         },
         {
             id: nanoid(),
             title: '55.0.15',
-            image: 'img'
+            image: <EllipseSVG/>
         }],
     [GraphsID_2]: [{
         id: nanoid(),
         title: '66.0,43.104',
-        image: 'img'
+        image: <EllipseSVG/>
     },
         {
             id: nanoid(),
             title: '5.0,5',
-            image: 'img'
+            image: <EllipseSVG/>
         },
         {
             id: nanoid(),
             title: '999.0.15',
-            image: 'img'
+            image: <EllipseSVG/>
         }],
     [GraphsID_3]: [{
         id: nanoid(),
         title: '79.0,43.104',
-        image: 'img'
+        image: <EllipseSVG/>
     },
         {
             id: nanoid(),
             title: '48484848484.0,5',
-            image: 'img'
+            image: <EllipseSVG/>
         },
         {
             id: nanoid(),
             title: '100000.0.15',
-            image: 'img'
+            image: <EllipseSVG/>
         }
     ]
 }
@@ -85,11 +86,7 @@ function Main() {
                             >
                                 {AllGraphsRows[i.id].map(graph => {
                                     return (
-                                        <div>
-
-                                            <div>{graph.title}</div>
-                                            <div>{graph.image}</div>
-                                        </div>
+                                        <AccordionItem title={graph.title} img={graph.image}/>
                                     )
                                 })}
                             </Accordion>

@@ -15,7 +15,7 @@
 }
 
 .graphContainer {
-    height: 272px;
+    height: max-content;
     width: 216px;
     left: -108px;
     top: -137px;
