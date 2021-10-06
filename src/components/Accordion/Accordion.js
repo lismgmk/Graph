@@ -18,6 +18,7 @@ function Accordion(props) {
         setRotateState(
             setActive === "active" ? "accordion__icon" : "accordion__icon rotate"
         );
+        console.log(content)
     }
 
     return (

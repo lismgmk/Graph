@@ -1,0 +1,39 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 90vw;
+    height: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.graphContainer {
+    height: 272px;
+    width: 216px;
+    left: -108px;
+    top: -137px;
+    border-radius: 2px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+.graphHeader{
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+}
+span{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 16px;
+
+}
