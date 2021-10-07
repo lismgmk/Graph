@@ -1,12 +1,11 @@
-import React, { useState, useRef } from "react";
-
-import "./Accordion.css";
-import {CuretSVG} from "../../asstets/RactangulareSVG";
+import React, {useState, useRef} from "react";
+import {CuretSVG} from "../../asstets/CuretSVG";
+import s from "./Accordion.module.css"
 
 function Accordion(props) {
     const [setActive, setActiveState] = useState("");
     const [setHeight, setHeightState] = useState("0px");
-    const [setRotate, setRotateState] = useState("accordion__icon");
+    const [setRotate, setRotateState] = useState("0");
 
     const content = useRef(null);
 
@@ -21,15 +20,15 @@ function Accordion(props) {
     }
 
     return (
-        <div className="accordion__section">
-            <button className={`accordion ${setActive}`} onClick={toggleAccordion}>
+        <div className={s.accordionSection}>
+            <button className={`${s.accordion}`} onClick={toggleAccordion}>
                 <CuretSVG deg={`${setRotate}`}/>
-                <p className="accordion__title">{props.title}</p>
+                <p className={s.accordionTitle}>{props.title}</p>
             </button>
             <div
                 ref={content}
-                style={{ maxHeight: `${setHeight}` }}
-                className="accordion__content"
+                style={{maxHeight: `${setHeight}`}}
+                className={s.accordionContent}
             >
 
                 {props.children}

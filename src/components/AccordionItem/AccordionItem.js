@@ -1,32 +1,30 @@
-import React, {useState, useRef} from "react";
-import "./AccordionItem.module..css";
-import {AdjustSVG} from "../../asstets/RactangulareSVG";
+import React, {useState} from "react";
+import s from "./AccordionItem.module.css";
+import {AdjustSVG} from "../../asstets/AdgjustVG";
 
 function AccordionItem(props) {
     const [down, setDown] = useState(false);
 
     return (
-        <div className="accordion__section">
-            <div
-                onMouseOver={() => {
-                    setDown(true)
-                }}
-                onMouseLeave={() => {
-                    setDown(false)
-                }}
-                className={`accordion`}
-            >
+        <div
+            className={s.wrapperItem}
+            onMouseOver={() => {
+                setDown(true)
+            }}
+            onMouseLeave={() => {
+                setDown(false)
+            }}
+        >
+            <div className={s.wrapperTitle}>
                 {props.img}
                 <span>
                     {props.title}
                 </span>
-                {down && <div
-                    className='buttonClass'>
-                    <AdjustSVG/>
-                </div>}
             </div>
-
-
+            {down && <div
+                className={s.buttonClass}>
+                <AdjustSVG/>
+            </div>}
         </div>
     );
 }

@@ -1,0 +1,33 @@
+.wrapperItem {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.wrapperTitle {
+    padding: 8px 26px 8px;
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    font-size: 11px;
+    line-height: 16px;
+}
+
+.wrapperTitle span {
+    margin-left: 6px;
+    font-weight: 400;
+}
+
+.wrapperItem:hover {
+    background-color: #F0F0F0;
+}
+
+.buttonClass:active {
+    background-color: blue;
+}
+
+.buttonClass {
+    margin-right: 4px;
+}
+
